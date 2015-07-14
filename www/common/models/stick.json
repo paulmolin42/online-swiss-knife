@@ -1,0 +1,23 @@
+{
+  "name": "Stick",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "givenAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "improvedUser": {
+      "type": "belongsTo",
+      "model": "ImprovedUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
