@@ -6,9 +6,11 @@
     "pretest": "jshint ."
   },
   "dependencies": {
+    "coffee-script": "^1.9.3",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "errorhandler": "^1.1.1",
+    "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^2.0.2",
     "gulp-util": "^3.0.6",
