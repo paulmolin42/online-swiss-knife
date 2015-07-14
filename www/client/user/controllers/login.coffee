@@ -1,5 +1,12 @@
 angular.module 'online-swiss-knife.user'
-.controller 'login', ($scope) ->
+.controller 'login', ($scope, ImprovedUser) ->
 
-  console.log 'LOGIN!!!'
-  $scope.test = 'test'
+  $scope.login = ->
+    ImprovedUser.login
+      email: $scope.loginEmail
+      password: $scope.loginPassword
+
+  $scope.createUser = ->
+    ImprovedUser.create
+      email: $scope.createEmail
+      password: $scope.createPassword
