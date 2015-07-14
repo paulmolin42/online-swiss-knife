@@ -1,5 +1,9 @@
-html
+html(ng-app="online-swiss-knife")
    head
       title Les bâtons
    body
       h1 Hello !
+      div(ui-view="")
+      script(src="js/vendor.js")
+      script(src="js/app.templates.js")
+      script(src="js/app.js")
