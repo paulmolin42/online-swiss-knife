@@ -1,5 +1,5 @@
 angular.module 'online-swiss-knife.common'
-.controller 'home', ($scope, ImprovedUser) ->
+.controller 'home', ($scope, $state, ImprovedUser) ->
 
   ImprovedUser.me()
   .$promise
@@ -9,5 +9,5 @@ angular.module 'online-swiss-knife.common'
   $scope.logout = () ->
     ImprovedUser.logout()
     .$promise
-    .then (res) ->
-      console.log res
+    .then () ->
+      $state.go 'login'
