@@ -1,4 +1,5 @@
 gulp = require 'gulp'
+path = require 'path'
 
 # Gulp Plugins
 
@@ -8,6 +9,7 @@ bowerFiles         = require 'main-bower-files'
 filter             = require 'gulp-filter'
 gutil              = require 'gulp-util'
 jade               = require 'gulp-jade'
+less               = require 'gulp-less'
 loopbackSdkAngular = require 'gulp-loopback-sdk-angular'
 templateCache      = require 'gulp-angular-templatecache'
 runSequence        = require 'run-sequence'
@@ -17,6 +19,7 @@ config =
   app_path: 'client'
   backend_main_file: 'server/server.js'
   backend_route: '/api'
+  less_main_file: 'client/main.less'
   loopback_services_main_file: 'lb-services.js'
   templates_file: 'app.templates.js'
   templates_module: 'online-swiss-knife.templates'
@@ -52,8 +55,11 @@ gulp.task 'index', [], ->
   .pipe gulp.dest config.web_path
   .on 'error', gutil.log
 
-gulp.task 'less', ->
-  console.log 'less'
+gulp.task 'less', [], ->
+  css = gulp.src config.less_main_file
+  .pipe less paths: [ path.join(__dirname) ]
+  .pipe gulp.dest config.web_path + '/css'
+  .on 'error', gutil.log
 
 gulp.task 'templates', [], ->
   gulp.src config.app_path + '/*/**/*.jade'
