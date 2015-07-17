@@ -3,4 +3,4 @@ angular.module 'online-swiss-knife.common'
 
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(mailto|tel|http|https):/)
 
-  $urlRouterProvider.otherwise '/login'
+  $urlRouterProvider.otherwise '/'
