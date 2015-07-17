@@ -5,6 +5,12 @@ form
    input(type="submit", ng-click="login()")
 h2 S'inscrire
 form
-   input(type="email", ng-model="createEmail")
-   input(type="password", ng-model="createPassword")
+   label Prénom
+      input(type="firstName", ng-model="createFirstName")
+   label Nom de famille
+      input(type="lastName", ng-model="createLastName")
+   label Email
+      input(type="email", ng-model="createEmail")
+   label Mot de passe
+      input(type="password", ng-model="createPassword")
    input(type="submit", ng-click="createUser()")
