@@ -11,5 +11,7 @@ angular.module 'online-swiss-knife.user'
 
   $scope.createUser = ->
     ImprovedUser.create
+      firstName: $scope.createFirstName
+      lastName: $scope.createLastName
       email: $scope.createEmail
       password: $scope.createPassword
