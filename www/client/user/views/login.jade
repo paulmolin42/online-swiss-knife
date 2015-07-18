@@ -1,16 +1,31 @@
-h2 Se connecter
+md-toolbar
+  .md-oolbar-tools
+    h2 Se connecter
 form
-   input(type="email", ng-model="loginEmail")
-   input(type="password", ng-model="loginPassword")
-   input(type="submit", ng-click="login()")
-h2 S'inscrire
+  md-input-container
+    label Prénom
+    input(type="email", ng-model="loginEmail")
+  md-input-container
+    label Prénom
+    input(type="password", ng-model="loginPassword")
+  md-input-container
+    label Prénom
+    md-button.md-primary.md-raised(ng-click="login()") Se connecter
+md-toolbar
+  .md-oolbar-tools
+    h2 S'inscrire
 form
-   label Prénom
-      input(type="firstName", ng-model="createFirstName")
-   label Nom de famille
-      input(type="lastName", ng-model="createLastName")
-   label Email
-      input(type="email", ng-model="createEmail")
-   label Mot de passe
-      input(type="password", ng-model="createPassword")
-   input(type="submit", ng-click="createUser()")
+  md-input-container
+    label Prénom
+    input(type="firstName", ng-model="createFirstName")
+  md-input-container
+    label Nom de famille
+    input(type="lastName", ng-model="createLastName")
+  md-input-container
+    label Email
+    input(type="email", ng-model="createEmail")
+  md-input-container
+    label Mot de passe
+    input(type="password", ng-model="createPassword")
+  md-input-container
+    md-button.md-primary.md-raised(ng-click="createUser()") Créer un utilisateur
